@@ -19,6 +19,9 @@ public class AddressBook {
 		this.buddies.remove(Buddy);
 	}
 	
+	public static void	main(String[] args) {
+		System.out.println("Address Book");
+	}
 	
 	
 }
