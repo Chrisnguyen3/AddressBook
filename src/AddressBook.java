@@ -21,6 +21,11 @@ public class AddressBook {
 	
 	public static void	main(String[] args) {
 		System.out.println("Address Book");
+		
+		BuddyInfo Homer = new BuddyInfo("Homer");
+		AddressBook myBuddies = new AddressBook();
+		
+		myBuddies.addBuddy(Homer);
 	}
 	
 	
