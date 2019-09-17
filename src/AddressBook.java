@@ -25,7 +25,7 @@ public class AddressBook {
 		BuddyInfo Homer = new BuddyInfo("Homer");
 		AddressBook myBuddies = new AddressBook();
 		
-		myBuddies.addBuddy(Homer);
+		myBuddies.addBuddy(Homer);	
 		myBuddies.removeBuddy(Homer);
 	}
 	
