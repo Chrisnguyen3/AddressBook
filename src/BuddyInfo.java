@@ -7,8 +7,10 @@ public class BuddyInfo {
 	
 	
 	
-	public BuddyInfo(String name) {
+	public BuddyInfo(String name, String address, String phoneNumber) {
 		this.setName(name);
+		this.setAddress(address);
+		this.setPhoneNumber(phoneNumber);
 	}
 	
 	/**
@@ -79,7 +81,7 @@ public class BuddyInfo {
 
 	public static void main(String[] args) {
 		
-		BuddyInfo b1 = new BuddyInfo("Homer");
+		BuddyInfo b1 = new BuddyInfo("Homer", "12 Westboro", "613");
 		
 		System.out.print("Hello " + b1.getName());
 		
