@@ -32,7 +32,6 @@ public class AddressBook {
 		myBuddies.removeBuddy(Homer);
 		System.out.print("Testing Branching Code");
 		
-		
 	}
 	
 	
