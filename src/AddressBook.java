@@ -12,7 +12,10 @@ public class AddressBook {
 	}
 	
 	public void addBuddy(BuddyInfo Buddy) {
-		this.buddies.add(Buddy);
+		if (Buddy != null) {
+			this.buddies.add(Buddy);
+		}
+		
 	}
 	
 	public void removeBuddy(BuddyInfo Buddy) {
@@ -22,7 +25,7 @@ public class AddressBook {
 	public static void	main(String[] args) {
 		System.out.println("Address Book");
 		
-		BuddyInfo Homer = new BuddyInfo("Homer");
+		BuddyInfo Homer = new BuddyInfo("Homer", "12 Westboro", "613");
 		AddressBook myBuddies = new AddressBook();
 		
 		myBuddies.addBuddy(Homer);	
