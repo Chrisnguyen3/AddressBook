@@ -1,8 +1,9 @@
 import java.util.ArrayList;
 
 public class AddressBook {
-	private ArrayList<BuddyInfo> buddies;
-
+	private ArrayList<BuddyInfo> buddies = new ArrayList<BuddyInfo>();
+	
+	
 	public ArrayList<BuddyInfo> getBuddies() {
 		return buddies;
 	}
