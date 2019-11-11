@@ -13,6 +13,10 @@ public class BuddyInfo {
 		this.setPhoneNumber(phoneNumber);
 	}
 	
+	public BuddyInfo(String name) {
+		this(name, "0", "0");
+	}
+	
 	/**
 	 * Gets the name of the buddy
 	 * @return the name of the buddy
@@ -80,6 +84,10 @@ public class BuddyInfo {
 	
 	public String toString() {
 		return this.name + "#" + this.address + "#" + this.phoneNumber;
+	}
+	
+	public static BuddyInfo importBuddy(String s) {
+		return new BuddyInfo(s);
 	}
 
 

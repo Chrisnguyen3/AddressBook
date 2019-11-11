@@ -1,8 +1,8 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class AddressBook {
 	private ArrayList<BuddyInfo> buddies = new ArrayList<BuddyInfo>();
@@ -51,8 +51,12 @@ public class AddressBook {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Please enter a Buddy's name: ");
+		String bName = sc.nextLine();
+		System.out.println(BuddyInfo.importBuddy(bName).toString());
+		sc.close();
 		
 	}
 	
