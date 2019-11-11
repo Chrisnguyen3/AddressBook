@@ -77,12 +77,16 @@ public class BuddyInfo {
 			return false;
 		}
 	}
+	
+	public String toString() {
+		return this.name + "#" + this.address + "#" + this.phoneNumber;
+	}
 
 
 	public static void main(String[] args) {
 		
 		BuddyInfo b1 = new BuddyInfo("Homer", "12 Westboro", "613");
-		
+		System.out.println(b1.toString());
 		System.out.print("Hello " + b1.getName());
 		
 	}
