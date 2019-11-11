@@ -1,3 +1,7 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class AddressBook {
@@ -23,19 +27,31 @@ public class AddressBook {
 		this.buddies.remove(Buddy);
 	}
 	
-	public void save() {
+	public void save(String filename) throws IOException {
+		BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true));
+		for(BuddyInfo b : this.buddies) {
+			writer.write(b.toString() + "\n");
+		}
 		
+		writer.close();
+		System.out.println("Completed");
 	}
 	
 	public static void	main(String[] args) {
-		System.out.println("Address Book");
 		
 		BuddyInfo Homer = new BuddyInfo("Homer", "12 Westboro", "613");
+		BuddyInfo Chris = new BuddyInfo("Chris", "390 Grand", "613");
 		AddressBook myBuddies = new AddressBook();
-		
 		myBuddies.addBuddy(Homer);	
-		myBuddies.removeBuddy(Homer);
-		System.out.print("Testing Branching Code");
+		myBuddies.addBuddy(Chris);
+		
+		try {
+			myBuddies.save("Test.txt");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		
 		
 	}
